@@ -4,7 +4,7 @@
   "description": "mgnでbootstrapをやるときはこれをつかうよ！",
   "main": "index.js",
   "scripts": {
-    "compile-pug": "pug --hierarchy -o dist/ src/html/",
+    "compile-pug": "pug --hierarchy -o dist/ src/html/ --pretty",
     "build": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "node-sass --importer node_modules/node-sass-globbing/index.js --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/style.scss dist/css/style.css",
     "css-prefix": "postcss --config src/postcss.config.js --replace dist/css/*.css",
