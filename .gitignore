@@ -96,3 +96,4 @@ sftp-config.json
 ## npm ##
 node_modules/
 dist/
+package-lock.json
