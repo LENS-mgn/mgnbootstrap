@@ -1,0 +1,34 @@
+{
+  "name": "mgn_bootstrap",
+  "version": "1.0.0",
+  "description": "mgnでbootstrapをやるときはこれをつかうよ！",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all css-compile css-prefix css-minify",
+    "css-compile": "node-sass --importer node_modules/node-sass-globbing/index.js --output-style expanded --source-map true --source-map-contents true --precision 6 src/style.scss dist/css/style.css",
+    "css-prefix": "postcss --config src/postcss.config.js --replace dist/css/*.css",
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/style.min.css dist/css/style.css",
+    "serve": "browser-sync start --server --serveStatic dist --files 'dist/css/*.css, dist/scripts/*.js, *.html'",
+    "watch": "npm run serve & watch 'npm run css-compile' ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{まだURLはないよ！}"
+  },
+  "author": "",
+  "license": "GLP",
+  "homepage": "https://www.m-g-n.me",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "bootstrap": "^4.1.0",
+    "clean-css-cli": "^4.1.10",
+    "jquery": "^1.9.1",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.2",
+    "popper.js": "^1.14.3",
+    "postcss-cli": "^4.1.1",
+    "watch": "1.0.2",
+    "browser-sync": "^2.24.4",
+    "node-sass-globbing": "0.0.23"
+  }
+}
