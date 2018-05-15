@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "compile-pug": "pug --hierarchy -o dist/ src/html/ --pretty",
-    "build": "npm-run-all css-compile css-prefix css-minify",
+    "imagemin-png": "imagemin src/img/*.png --plugin=pngquant -o dist/img",
+    "imagemin-jpg": "imagemin src/img/*.jpg --plugin=jpeg-recompress -o dist/img",
+    "imagemin-gif": "imagemin src/img/*.gif -o dist/img",
+    "imagemin-all": "npm run imagemin-png & npm run imagemin-jpg & npm run imagemin-gif",
+    "build": "npm-run-all css-compile css-prefix css-minify imagemin-all",
     "css-compile": "node-sass --importer node_modules/node-sass-globbing/index.js --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/style.scss dist/css/style.css",
     "css-prefix": "postcss --config src/postcss.config.js --replace dist/css/*.css",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/style.min.css dist/css/style.css",
@@ -16,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/{まだURLはないよ！}"
   },
-  "author": "",
+  "author": "megane9988",
   "license": "GLP",
   "homepage": "https://www.m-g-n.me",
   "dependencies": {
@@ -24,6 +28,9 @@
     "bootstrap": "^4.1.0",
     "browser-sync": "^2.24.4",
     "clean-css-cli": "^4.1.10",
+    "imagemin-cli": "^3.0.0",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-pngquant": "^5.1.0",
     "jquery": "^1.9.1",
     "node-sass": "^4.9.0",
     "node-sass-globbing": "0.0.23",
