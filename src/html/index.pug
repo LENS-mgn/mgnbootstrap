@@ -5,9 +5,133 @@ html(lang="ja")
   body
     include includes/_header
     main
-      .container
-        .row
-          .col-12
-            p ここがメインですよ
+      section.about.bg__blue
+        .container
+          .row.justify-content-md-center
+            .col-12.col-md-8
+              h2.heading__01 ABOUT
+              h3.heading__02 日本最大のCoderDojoの祭典
+              p DojoCon Japanは日本のCoderDojo関係者（見守る大人、学ぶ子供）とその活動に賛同・協賛する人が全国各地から集まる大きなイベントです。
+              h3.heading__02 CoderDojo
+              p CoderDojoは2011年にアイルランドから始まった子供達にプログラミングを学ぶ場を提供するボランティア主導の世界的な非営利活動です。その数は世界中で1241（2017年4月現在）にも及びます。
+              p 昨年初めてDojoCon Japanを開催したとき、日本には45のDojoしかありませんでした。しかし、開催後にはその数を飛躍的に伸ばし、現在では100以上のDojoが日本で活動しています(2017年9月現在)。
+              h3.heading__02 開催にあたって
+              p 今回は、「つながる Dojo to Dojo 」をテーマに、全国のCoderDojo関係者が集まることで交流や意見交換を行ったり、一生付き合える仲間づくりをすることで、日本のCoderDojoコミュニティの絆を強めることを目的に開催します。
+              p DojoCon Japanに参加してもらうことで、「CoderDojo」という同じ活動をしているのに、他のDojoのことを余り知らないという課題を解決し、相互理解を深めることでそこから新しい何かが生まれることを期待しています。
+              p また、これまでCoderDojoを知らなかった方にもこの機会に知っていただき、地元のDojoに参加したり、新しくDojoを立ち上げるきっかけになってほしいと願っています。
+      section.outline.bg__blue.pb-5
+        .container
+          .row.justify-content-md-center
+            .col-12.col-lg-6
+              h2.heading__01 開催概要
+              dl.row.justify-content-md-center.outline__detail
+                dt.col-3
+                  span 開催日
+                dd.col-9 2018年8月25日（土）
+                dt.col-3
+                  span 時間
+                dd.col-9 10:30-18:30（開場10:00）
+                dt.col-3
+                  span 場所
+                dd.col-9 サイボウズ東京オフィス
+                dt.col-3
+                  span 参加費
+                dd.col-9 無料
+              p.caution ※参加には事前の申込みが必要です
+              .text-center.mt-5
+                a(href="#" role="button").btn.btn__green.btn__xxl ENTRY
+
+      section.news.bg__green.pb-5
+        .container
+          .row
+            .col-12
+              h2.heading__01 NEWS
+        .container
+          .row.post-list
+            - for (var i = 0; i < 3; i++)
+              .col-md-6
+                article.post-list__item
+                  a(href="#")
+                    .post-list__thumbnail
+                      img(src="https://dummyimage.com/600x400/000/fff" alt="NEWS記事のイメージ")
+                    .post-list__content
+                      p.post-list__date 2018.07.01
+                      h3.post-list__title DojoCon Japan2018のサイトが公開しました。
+      section.access.pb-5
+        .container
+          .row
+            .col-12
+              h2.heading__01.bgwh ACCESS
+        .container
+          .row
+            .col-md-6
+              dl.access__detail
+                dt 場所
+                dd サイボウズ東京オフィス
+                dt 所在地
+                dd 〒103-6028<br>東京都中央区日本橋2-7-1 東京日本橋タワー 27階
+                dt 電車でお越しの場合
+                dd 東京メトロ銀座線・東西線、都営地下鉄浅草線「日本橋駅」B6出口直通<br>東京メトロ半蔵門線・銀座線「三越前駅」B6出口より徒歩3分<br>JR：「東京駅」八重洲北口より徒歩10分
+            .col-md-6
+              img(src="img/cybozu.jpg" alt="サイボウズ東京オフィスのイメージ")
+            .col-12.mt-5
+              iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.793227350243!2d139.77189131579627!3d35.68209303753114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c46de1a941d%3A0x4fe7d8e930a3b4e!2z44K144Kk44Oc44Km44K65qCq5byP5Lya56S-!5e0!3m2!1sja!2sjp!4v1528120258500" frameborder="0" style="border:0" allowfullscreen).access__map
+      section.session.bg__green
+        .container
+          .row
+            .col-12
+          h2.heading__01 SESSION
+          .row.post-list
+            - for (var i = 0; i < 5; i++)
+              .col-md-4
+                article.post-list__item
+                  a(href="#")
+                    .post-list__thumbnail
+                      img(src="https://dummyimage.com/600x400/000/fff" alt="セッション登壇者名")
+                    .post-list__content
+                      h3.post-list__title DojoCon Japan2018のサイトが公開しました。
+                      p.post-list__time 11:00-14:00
+                      p.post-list__speaker 宮島 衣瑛
+                    .post-list__more
+                      a(href="#" role="button").btn.btn__white.btn__xl more
+      section.workshop.bg__green
+        .container
+          .row.justify-content-md-center
+            .col-12.col-md-8
+              h2.heading__01 WORK SHOP
+              h3.heading__02 みんなつながる交流企画～Dojo to Dojo～
+              p 日本各地のみならず世界から、11月4日はCoderDojo関係者が大阪にやってきます。<br>今年は「つながる～Dojo to Dojo～」をテーマに、全国のCoderDojo関係者が交流し、意見交換を行ったり、一生付き合える仲間づくりをすることで、日本のCoderDojoコミュニティの絆を強めることを目的に開催します。
+              p ニンジャもチャンピオンもメンターも！Dojoに興味はあるけど初参加の人も！<br>みんなが”つながる”のための企画が目白押しです。
+          .row.post-list.mt-5
+            - for (var i = 0; i < 5; i++)
+              .col-md-4
+                article.post-list__item
+                  a(href="#")
+                    .post-list__thumbnail
+                      img(src="https://dummyimage.com/600x400/000/fff" alt="ワークショップイメージ")
+                    .post-list__content
+                      h3.post-list__title DojoCon Japan2018のサイトが公開しました。
+                      p.post-list__cat
+                        span カテゴリー
+                    .post-list__more
+                      a(href="#" role="button").btn.btn__white.btn__xl more
+      section.sponsor
+          h2.heading__01.bgwh SPONSOR
+          h3.heading__02
+            span Gold Sponsor
+          h3.heading__02
+            span Silver Sponsor
+          h3.heading__02
+            span Bronze Sponsor
+      section.contact.bg__blue.pb-5
+        .container
+          .row
+            .col-12#contact
+              h3.heading__01 CONTACT
+              .text-center
+                a(src="#").btn.btn__white.btn__xxl フォームを開く
+            .col-12#coderdojo-foundation
+              h3.heading__01 後援
+              p.text-center CoderDojo Foundation
     include includes/_footer
     include includes/_footermeta

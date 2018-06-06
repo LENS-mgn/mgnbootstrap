@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Backlog api demo01</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+  // ユーザー一覧より名前とメアドを取得
+
+  const api_key = 'aAR529DtSwlHQnkWAy5CzIPgYn2245X4llovJ9GX485ibQZUXB1EHD7p0f1NwPLq'
+  const space_id = 'megane9988'
+
+  $.ajax({
+    type: 'GET',
+    url: 'https://'+ space_id +'.backlog.jp/api/v2/users?apiKey='+api_key,
+    dataType: 'json',
+    success: function (json) {
+      let len = json.length;
+      for (let i = 0; i < len; i++) {
+        let user_name = json[i].name + "さん"
+        let user_mail = json[i].mailAddress
+        let user_id = json[i].id
+        $('#list').append('<dt>' + user_name + '</dt>' + '<dd>' + user_mail + user_id + '</dd>')
+      }
+    }
+  });
+  // 自分の未処理課題
+  $.ajax({
+    type: 'GET',
+    url: 'https://'+ space_id +'.backlog.jp/api/v2/users?apiKey='+api_key +'&statusId[]=1&assigneeId[]=1073875276',
+    dataType: 'json',
+    success: function (json) {
+      console.log(json)
+      let len = json.length;
+      for (let i = 0; i < len; i++) {
+        let status = json[i].status['id']
+        $('#issue').append('<li>' + status + '</li>')
+      }
+    }
+  });
+  // 自分の処理中課題
+  $.ajax({
+    type: 'GET',
+    url: 'https://'+ space_id +'.backlog.jp/api/v2/users?apiKey='+ api_key +'&statusId[]=2&assigneeId[]=1073875276',
+    dataType: 'json',
+    success: function (json) {
+      console.log(json)
+      let len = json.length;
+      for (let i = 0; i < len; i++) {
+        let status = json[i].status['id']
+        $('#issue').append('<li>' + status + '</li>')
+      }
+    }
+  });
+  // 自分の処理済課題
+  $.ajax({
+    type: 'GET',
+    url: 'https://'+ space_id +'.backlog.jp/api/v2/users?apiKey='+ api_key +'&statusId[]=3&assigneeId[]=1073875276',
+    dataType: 'json',
+    success: function (json) {
+      console.log(json)
+      let len = json.length;
+      for (let i = 0; i < len; i++) {
+        let status = json[i].status['id']
+        $('#issue').append('<li>' + status + '</li>')
+      }
+    }
+  });
+  // 自分の完了課題
+  $.ajax({
+    type: 'GET',
+    url: 'https://'+ space_id +'.backlog.jp/api/v2/users?apiKey='+api_key+'&statusId[]=4&assigneeId[]=1073875276',
+    dataType: 'json',
+    success: function (json) {
+      console.log(json)
+      let len = json.length;
+      for (let i = 0; i < len; i++) {
+        let status = json[i].status['id']
+        $('#issue').append('<li>' + status + '</li>')
+      }
+    }
+  });
+  // チームの未処理且つ期限切れの課題
+  $.ajax({
+    type: 'GET',
+    url: 'https://'+ space_id +'.backlog.jp/api/v2/users?apiKey='+api_key+'&statusId[]=1',
+    dataType: 'json',
+    success: function (json) {
+      console.log(json)
+      let len = json.length;
+      for (let i = 0; i < len; i++) {
+        let u_name = json[i].assignee['name']
+        $('#issue').append('<li>' + u_name + '</li>')
+      }
+    }
+  });
+
+</script>
+<h2>ユーザーの一覧(最新から5件)</h2>
+<dl id="list"></dl>
+<h2>課題のステータスの一覧</h2>
+<ul id="issue"></ul>
+</body>
+</html>
