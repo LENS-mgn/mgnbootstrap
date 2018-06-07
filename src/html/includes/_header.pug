@@ -1,5 +1,14 @@
-header.site-header
-  .main-visual.text-center
-    picture
-      source(media="(min-width: 768px)" srcset="img/main-visual.png")
-      img(src="img/main-visual_sp.png" alt="DojoCon Japan 2018 2018.8.25(Sat) @サイボウズ東京オフィス")
+if page_name == 'top'
+  header.site-header
+    .main-visual.text-center
+      picture
+        source(media="(min-width: 768px)" srcset="img/main-visual.png")
+        img(src="img/main-visual_sp.png" alt="DojoCon Japan 2018 2018.8.25(Sat) @サイボウズ東京オフィス")
+else
+  header.site-header.bg__green.pt-5
+    .container
+      .row
+        .col-12.text-center
+          h3.site-header__site-name DojoCon Japan 2018
+          h1.heading__01 SESSION
+

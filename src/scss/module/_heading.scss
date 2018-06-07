@@ -1,5 +1,5 @@
-.heading{
-  &__01{
+.heading {
+  &__01 {
     font-family: 'Ropa Sans', sans-serif;
     text-align: center;
     margin: 50px 0 30px 0;
@@ -13,20 +13,20 @@
       font-size: $font-size-base * 4.5;
       background-size: 390px;
     }
-    &.bgwh{
-      background-image: url("../img/heading01bg__bgwihte.svg") ;
+    &.bgwh {
+      background-image: url("../img/heading01bg__bgwihte.svg");
       color: $dojocon-green;
     }
   }
-  &__02{
-    font-family: 'Ropa Sans', sans-serif;
+  &__02 {
+    font-family: $dojocon-font;
     text-align: center;
     margin: 40px 0 20px 0;
     @include media-breakpoint-up(md) {
       margin: 80px 0 50px 0;
       font-size: $font-size-base * 2;
     }
-    span{
+    span {
       color: #fff;
       display: inline-block;
       border-radius: 30px;
