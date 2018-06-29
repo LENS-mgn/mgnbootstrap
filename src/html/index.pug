@@ -7,6 +7,23 @@ html(lang="ja")
   body
     include includes/_header
     main
+      section.gnav#gnav
+        .gnav__toggle#gnav__toggle
+          a(href="#")
+            img(src="img/toggle-on.svg").gnav__toggle-on
+        .gnav__inner#gnav__inner
+          h3.gnav__title.text-center DojoCon Japan 2018
+          ul.gnav__menu.d-md-flex.flex-md-row
+            - for (var i = 0; i < 8; i++)
+              li
+                a(href="#") ABOUT
+          ul.gnav__sns.list-inline.text-center.text-md-right.mb-0
+            li.list-inline-item
+              a(href="https://twitter.com/DojoConJapan" target="_blank")
+                i.fab.fa-twitter
+            li.list-inline-item
+              a(href="https://www.facebook.com/dojoconjapan" target="_blank")
+                  i.fab.fa-facebook-f
       section.about.bg__blue
         .container
           .row.justify-content-md-center
