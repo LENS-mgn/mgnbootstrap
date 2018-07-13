@@ -7,7 +7,7 @@ html(lang="ja")
   body
     include includes/_header
     main
-      section.gnav#gnav
+      //section.gnav#gnav
         .gnav__toggle#gnav__toggle
           a(href="#")
             img(src="img/toggle-on.svg").gnav__toggle-on
@@ -33,10 +33,6 @@ html(lang="ja")
               p DojoCon Japan は日本の CoderDojo 関係者(見守る大人、学ぶ子供)とその活動に賛同・協賛する人が全国各地から集まる大きなイベントです。 一昨年と昨年は大阪で開催され、イベント開催時 45 箇所だった日本の Dojo が今では約 140 箇所を超えるコミュニティに成長しました。 今回は「ひろがる plus one」をテーマに CoderDojo コミュニティに新しい風を巻き起こし，チャンピオン，メンター，ニンジャに関係なく， プラスワンの発見をすることのできる DojoCon Japan を目標にしています。
               h3.heading__02 CoderDojo
               p CoderDojo は 2011 年にアイルランドから始まった子供達にプログラミングを学ぶ場を提供するボランティア主導の世界的な非営利活動です。その数は世界中で 1600 以上(2018 年 7 月現在)にも及びます。
-              h3.heading__02 GO GLOBAL! プログラミングコンテスト作品募集!!
-              p 作品を発表して海外に行こう! テーマは「ひろがる」プログラムの言語は問わず、以下のジャンルで応募可能です。詳細は Web ページをご覧ください。
-              ul
-                li Scratch・Web サイト・スマホ・タブレット・ゲーム・電子工作
 
       section.outline.bg__blue.pb-5
             .container
@@ -67,7 +63,7 @@ html(lang="ja")
               h2.heading__01 NEWS
         .container
           .row.post-list
-            - for (var i = 0; i < 3; i++)
+            - for (var i = 0; i < 1; i++)
               .col-md-6
                 article.post-list__item
                   a(href="#")
@@ -101,7 +97,7 @@ html(lang="ja")
             .col-12
           h2.heading__01 SESSION
           .row.post-list
-            - for (var i = 0; i < 5; i++)
+            - for (var i = 0; i < 1; i++)
               .col-md-4
                 article.post-list__item
                   a(href="#")
@@ -118,11 +114,9 @@ html(lang="ja")
           .row.justify-content-md-center
             .col-12.col-md-8
               h2.heading__01 WORK SHOP
-              h3.heading__02 みんなつながる交流企画～Dojo to Dojo～
-              p 日本各地のみならず世界から、11月4日はCoderDojo関係者が大阪にやってきます。<br>今年は「つながる～Dojo to Dojo～」をテーマに、全国のCoderDojo関係者が交流し、意見交換を行ったり、一生付き合える仲間づくりをすることで、日本のCoderDojoコミュニティの絆を強めることを目的に開催します。
-              p ニンジャもチャンピオンもメンターも！Dojoに興味はあるけど初参加の人も！<br>みんなが”つながる”のための企画が目白押しです。
+              h3.heading__02 COMING SOON
           .row.post-list.mt-5
-            - for (var i = 0; i < 5; i++)
+            - for (var i = 0; i < 0; i++)
               .col-md-4
                 article.post-list__item
                   a(href="#")
@@ -136,11 +130,12 @@ html(lang="ja")
                       a(href="#" role="button").btn.btn__white.btn__xl more
       section.sponsor
           h2.heading__01.bgwh SPONSOR
-          h3.heading__02
+          p.text-center 募集中です
+          //h3.heading__02
             span Gold Sponsor
-          h3.heading__02
+          //h3.heading__02
             span Silver Sponsor
-          h3.heading__02
+          //h3.heading__02
             span Bronze Sponsor
       section.contact.bg__blue.pb-5
         .container
@@ -148,7 +143,8 @@ html(lang="ja")
             .col-12#contact
               h3.heading__01 CONTACT
               .text-center
-                a(src="#").btn.btn__white.btn__xxl フォームを開く
+                p メールにてお問い合わせください
+                //a(src="#").btn.btn__white.btn__xxl フォームを開く
             .col-12#coderdojo-foundation
               h3.heading__01 後援
               p.text-center CoderDojo Foundation
