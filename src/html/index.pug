@@ -63,15 +63,30 @@ html(lang="ja")
               h2.heading__01 NEWS
         .container
           .row.post-list
-            - for (var i = 0; i < 1; i++)
-              .col-md-6
-                article.post-list__item
-                  a(href="#")
-                    .post-list__thumbnail
-                      img(src="https://dummyimage.com/600x400/000/fff" alt="NEWS記事のイメージ")
-                    .post-list__content
-                      p.post-list__date 2018.07.01
-                      h3.post-list__title DojoCon Japan2018のサイトが公開しました。
+            .col-md-6
+              article.post-list__item
+                a(href="#")
+                  .post-list__thumbnail
+                    img(src="https://dummyimage.com/600x400/000/fff" alt="NEWS記事のイメージ")
+                  .post-list__content
+                    p.post-list__date 2018.07.14
+                    h3.post-list__title DojoCon Japan2018受付参加受けを開始いたしました。
+            .col-md-6
+              article.post-list__item
+                a(href="#")
+                  .post-list__thumbnail
+                    img(src="https://dummyimage.com/600x400/000/fff" alt="NEWS記事のイメージ")
+                  .post-list__content
+                    p.post-list__date 2018.07.14
+                    h3.post-list__title スポンサー募集中
+            .col-md-6
+              article.post-list__item
+                a(href="#")
+                  .post-list__thumbnail
+                    img(src="https://dummyimage.com/600x400/000/fff" alt="NEWS記事のイメージ")
+                  .post-list__content
+                    p.post-list__date 2018.07.14
+                    h3.post-list__title コンテンスト募集開始いたしました。
       section.access.pb-5
         .container
           .row
@@ -104,9 +119,9 @@ html(lang="ja")
                     .post-list__thumbnail
                       img(src="https://dummyimage.com/600x400/000/fff" alt="セッション登壇者名")
                     .post-list__content
-                      h3.post-list__title DojoCon Japan2018のサイトが公開しました。
-                      p.post-list__time 11:00-14:00
-                      p.post-list__speaker 宮島 衣瑛
+                      h3.post-list__title 基調講演
+                      //p.post-list__time
+                      p.post-list__speaker 細谷 崇
                     .post-list__more
                       a(href="#" role="button").btn.btn__white.btn__xl more
       section.workshop.bg__green
@@ -130,7 +145,8 @@ html(lang="ja")
                       a(href="#" role="button").btn.btn__white.btn__xl more
       section.sponsor
           h2.heading__01.bgwh SPONSOR
-          p.text-center 募集中です
+          p.text-center 現在募集中です<br>
+            a(href="/sponsor.html") 詳しくはこちらをご覧ください。
           //h3.heading__02
             span Gold Sponsor
           //h3.heading__02
@@ -143,7 +159,8 @@ html(lang="ja")
             .col-12#contact
               h3.heading__01 CONTACT
               .text-center
-                p メールにてお問い合わせください
+                p
+                  a(href="mailto:dojocon2018@coderdojo.jp") メールにてお問い合わせください
                 //a(src="#").btn.btn__white.btn__xxl フォームを開く
             .col-12#coderdojo-foundation
               h3.heading__01 後援

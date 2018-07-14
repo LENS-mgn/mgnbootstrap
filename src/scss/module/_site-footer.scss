@@ -16,4 +16,14 @@
       }
     }
   }
+  &__text-link{
+    font-size: $font-size-sm;
+    display: block;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+      display: inline;
+      margin-bottom: 0;
+      margin-right: 40px !important;
+    }
+  }
 }
