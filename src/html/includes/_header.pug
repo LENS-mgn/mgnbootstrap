@@ -9,4 +9,13 @@ else
         .col-12.text-center
           h3.site-header__site-name
             a(href="/") DojoCon Japan 2018
-          h1.heading__01 Code of contact
+            if page_name == 'Code of contact'
+              h1.heading__01 Code of contact
+            else if page_name == 'Contest'
+              h1.heading__01 Contest
+            else if page_name == 'Sponsor'
+              h1.heading__01 Sponsor
+            else if page_name == 'Session'
+              h1.heading__01 Session
+            else
+              h1.heading__01 ひろがる plus one
