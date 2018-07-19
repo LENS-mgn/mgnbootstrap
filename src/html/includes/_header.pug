@@ -1,7 +1,9 @@
 if page_name == 'top'
   header.site-header
     .main-visual.text-center
-      img(src="img/main.svg" alt="DojoCon Japan 2018 2018.8.25(Sat) @サイボウズ東京オフィス")
+      picture
+        source(media="(min-width: 768px)" srcset="img/mainvisual.png")
+        img(src="img/mainvisual_sp.png" alt="DojoCon Japan 2018 2018.8.25(Sat) @サイボウズ東京オフィス")
 else
   header.site-header.bg__green.pt-5
     .container

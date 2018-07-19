@@ -1,6 +1,7 @@
 .speaker-info{
   padding-top: 30px;
   &__name{
+    font-size: $font-size-lg;
     font-weight: bold;
   }
   &__description{
